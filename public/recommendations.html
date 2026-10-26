@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Makeup recommendations for your skin tone, with the source and review status of every match.">
+  <title>Your looks | Full-Look Makeup Matcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="index.html">Full Look</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Choose your tone</a>
+        <a href="recommendations.html" aria-current="page">Your looks</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <a class="back-link" href="index.html">&larr; Change tone</a>
+
+      <section class="summary" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Step 2 of 2</p>
+          <h1 id="page-title">Your <em>looks</em></h1>
+        </div>
+        <div class="chosen">
+          <div class="chosen-chip" id="chosen-chip" role="img" aria-label="Your selected tone"></div>
+          <div>
+            <p class="chosen-name" id="chosen-name">Choose a tone</p>
+            <p class="chosen-hex" id="chosen-hex"></p>
+            <a class="btn-text" href="index.html">Change</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Filters">
+        <ul class="categories" id="categories">
+          <li><button type="button" class="chip-btn" data-category="foundation" aria-pressed="true">Foundation</button></li>
+          <li><button type="button" class="chip-btn" data-category="concealer" disabled>Concealer &middot; soon</button></li>
+          <li><button type="button" class="chip-btn" data-category="blush" disabled>Blush &middot; soon</button></li>
+          <li><button type="button" class="chip-btn" data-category="bronzer" disabled>Bronzer &middot; soon</button></li>
+          <li><button type="button" class="chip-btn" data-category="lip" disabled>Lip &middot; soon</button></li>
+        </ul>
+        <label class="check-line">
+          <input type="checkbox" id="include-unreviewed">
+          Include unreviewed proposals (not verified)
+        </label>
+      </section>
+
+      <section class="coverage" id="coverage" aria-label="Catalog coverage" hidden>
+        <span><strong id="brand-count">0</strong> brands for this tone</span>
+        <span id="goal-text">Goal: 8 to 10 brands per tone</span>
+      </section>
+
+      <section id="results" aria-live="polite" aria-busy="true">
+        <div class="status" id="status">
+          <h2 id="status-title">Loading</h2>
+          <p id="status-text">Finding matches for your tone.</p>
+        </div>
+        <ul class="cards" id="card-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Recommendations are potential matches based on a reviewed catalog, not guarantees. Every match shows its source and review status.</div>
+  </footer>
+
+  <!-- the layout of ONE result card. The words are filled in by js/recommendations.js from the API. -->
+  <template id="card-template">
+    <li class="card">
+      <div class="card-swatch"><span class="card-swatch-label"></span></div>
+      <div class="card-body">
+        <p class="label card-brand"></p>
+        <h3 class="card-product"></h3>
+        <p class="card-shade"></p>
+        <p class="card-meta card-wording"></p>
+        <p class="card-meta card-match"></p>
+        <span class="badge card-status"></span>
+        <div class="card-links"></div>
+      </div>
+    </li>
+  </template>
+
+  <script src="js/recommendations.js"></script>
+</body>
+</html>

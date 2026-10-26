@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose your skin tone and get makeup recommendations that are made to show up and blend on you.">
+  <title>Choose your tone | Full-Look Makeup Matcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="index.html">Full Look</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Choose your tone</a>
+        <a href="recommendations.html">Your looks</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container choose">
+
+      <section class="choose-intro" aria-labelledby="page-title">
+        <p class="eyebrow">Step 1 of 2</p>
+        <h1 id="page-title">Choose<br><em>your tone</em></h1>
+        <p class="lede">Select the swatch closest to your skin. We'll show makeup that is made to blend and show up on you.</p>
+        <p class="fine-print">Screens and lighting change how color looks. If you sit between two swatches, pick one now and try its neighbor on the next page. A selfie-based estimate is planned for a later version.</p>
+      </section>
+
+      <form class="tone-form" id="tone-form" action="recommendations.html" method="get">
+        <fieldset class="tone-grid">
+          <legend class="sr-only">Skin tone, from lightest (01) to deepest (10)</legend>
+        <label class="tone">
+          <input type="radio" name="tone" value="1" required>
+          <span class="tone-tile" style="--tone: #f6ede4; --tone-text: #1a1816;">
+            <span class="tone-name">Shade 01</span>
+            <span class="tone-num">01</span>
+            <span class="tone-hex">#f6ede4</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="2" required>
+          <span class="tone-tile" style="--tone: #f3e7db; --tone-text: #1a1816;">
+            <span class="tone-name">Shade 02</span>
+            <span class="tone-num">02</span>
+            <span class="tone-hex">#f3e7db</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="3" required>
+          <span class="tone-tile" style="--tone: #f7ead0; --tone-text: #1a1816;">
+            <span class="tone-name">Shade 03</span>
+            <span class="tone-num">03</span>
+            <span class="tone-hex">#f7ead0</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="4" required>
+          <span class="tone-tile" style="--tone: #eadaba; --tone-text: #1a1816;">
+            <span class="tone-name">Shade 04</span>
+            <span class="tone-num">04</span>
+            <span class="tone-hex">#eadaba</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="5" required>
+          <span class="tone-tile" style="--tone: #d7bd96; --tone-text: #1a1816;">
+            <span class="tone-name">Shade 05</span>
+            <span class="tone-num">05</span>
+            <span class="tone-hex">#d7bd96</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="6" required>
+          <span class="tone-tile" style="--tone: #a07e56; --tone-text: #1a1816;">
+            <span class="tone-name">Shade 06</span>
+            <span class="tone-num">06</span>
+            <span class="tone-hex">#a07e56</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="7" required>
+          <span class="tone-tile" style="--tone: #825c43; --tone-text: #ffffff;">
+            <span class="tone-name">Shade 07</span>
+            <span class="tone-num">07</span>
+            <span class="tone-hex">#825c43</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="8" required>
+          <span class="tone-tile" style="--tone: #604134; --tone-text: #ffffff;">
+            <span class="tone-name">Shade 08</span>
+            <span class="tone-num">08</span>
+            <span class="tone-hex">#604134</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="9" required>
+          <span class="tone-tile" style="--tone: #3a312a; --tone-text: #ffffff;">
+            <span class="tone-name">Shade 09</span>
+            <span class="tone-num">09</span>
+            <span class="tone-hex">#3a312a</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+
+        <label class="tone">
+          <input type="radio" name="tone" value="10" required>
+          <span class="tone-tile" style="--tone: #292420; --tone-text: #ffffff;">
+            <span class="tone-name">Shade 10</span>
+            <span class="tone-num">10</span>
+            <span class="tone-hex">#292420</span>
+            <span class="tone-state" aria-hidden="true"></span>
+          </span>
+        </label>
+        </fieldset>
+
+        <div class="selection">
+          <p class="selection-text" id="selection-text" aria-live="polite">No tone selected yet</p>
+          <div class="form-actions">
+            <button type="button" class="btn-text" id="clear-button" hidden>Clear selection</button>
+            <button type="submit" class="btn">See my looks</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Recommendations are potential matches based on a reviewed catalog, not guarantees.</div>
+  </footer>
+
+  <script src="js/tone-picker.js"></script>
+</body>
+</html>
