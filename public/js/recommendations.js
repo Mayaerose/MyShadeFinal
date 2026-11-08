@@ -85,7 +85,8 @@ function loadRecommendations () {
     })
     .then(function (answer) {
       if (answer.status === 503) {
-        return showStatus('Setup needed', answer.body.message)
+        // database not connected: keep the box but leave it empty
+        return showStatus('', '')
       }
       if (!answer.ok) {
         return showStatus('We could not load matches', answer.body.message || 'Please try again.')
@@ -119,8 +120,10 @@ function start () {
     .then(function (data) {
       var tone = data.skinTones[Number(toneLevel) - 1]
       document.querySelector('#chosen-chip').style.setProperty('--tone', tone.hex)
+      document.querySelector('#chosen-chip').style.setProperty('--ink', tone.textColor)
       document.querySelector('#chosen-chip').setAttribute('aria-label', 'Color of ' + tone.name)
       document.querySelector('#chosen-name').textContent = tone.name
+      document.querySelector('#chosen-number').textContent = String(tone.level).padStart(2, '0')
       document.querySelector('#chosen-hex').textContent = tone.hex
       loadRecommendations()
     })
