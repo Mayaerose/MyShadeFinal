@@ -19,6 +19,9 @@ A makeup recommendation app for people of color, with particular care for deeper
 ## Project Layout
 ...
 
+
+VIEW APP HERE: https://myshadefinal.onrender.com
+
 ## Author
 
 Maya Rose 🌹
